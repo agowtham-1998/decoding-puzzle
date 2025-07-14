@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Perception Puzzle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --linkedin-blue: #0077B5;
+            --dark-grey: #333333;
+            --light-grey: #F9FAFB;
+            --grid-line: #E0E0E0;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: white;
+            color: var(--dark-grey);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .puzzle-font {
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .slide {
+            width: 1200px;
+            height: 1200px;
+            padding: 80px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .grid-item {
+            background-color: white;
+            border: 1px solid var(--grid-line);
+            padding: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        .highlight-blue {
+            background-color: rgba(0, 119, 181, 0.1);
+            border-left: 5px solid var(--linkedin-blue);
+            padding: 20px;
+        }
+        
+        .slide-nav {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .slide-nav button {
+            background-color: var(--linkedin-blue);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .reveal-button {
+            background-color: var(--linkedin-blue);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide 1 -->
+        <div class="slide" id="slide1">
+            <div class="text-center" style="margin-top: 80px;">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bf6a4b76-6931-49d1-8a3d-01d35794f4a6.png" alt="Magnifying glass icon with blue handle and clear lens" class="mx-auto mb-12" style="width: 200px;">
+                <h1 class="text-5xl font-bold mb-8" style="color: var(--linkedin-blue);">What You Think You See…</h1>
+                <h1 class="text-5xl font-bold mb-8">Isn't Always What's Happening</h1>
+                <p class="text-2xl mt-12">Can you figure this out?</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide2">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-12" style="color: var(--linkedin-blue);">Puzzle Numbers Displayed Neatly</h2>
+                <div class="grid-container puzzle-font">
+                    <div class="grid-item">19</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">20</div>
+                    <div class="grid-item">39</div>
+                    <div class="grid-item">17</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">19</div>
+                    <div class="grid-item">36</div>
+                    <div class="grid-item">15</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">18</div>
+                    <div class="grid-item">33</div>
+                    <div class="grid-item">14</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">17</div>
+                    <div class="grid-item">31</div>
+                </div>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7fd0a5f-5134-4af3-8377-adce0ee7cb7e.png" alt="Small transparent question mark watermark" class="absolute bottom-20 right-20 opacity-20" style="width: 300px;">
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide3">
+            <h2 class="text-4xl font-bold mb-16 text-center" style="color: var(--linkedin-blue);">Most People Think:</h2>
+            <div class="flex justify-center gap-8 mb-8">
+                <div class="text-center w-1/3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6da14aab-2e69-4eb5-9b8f-237e49f1115f.png" alt="Subtraction icon showing minus sign in circle" class="mx-auto mb-4">
+                    <p class="text-2xl">Subtraction?</p>
+                </div>
+                <div class="text-center w-1/3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a301cb2-6db6-4906-ab6a-6ed099a9cf6d.png" alt="Complex math formula with symbols in square" class="mx-auto mb-4">
+                    <p class="text-2xl">Complex formulas?</p>
+                </div>
+                <div class="text-center w-1/3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a9a1341a-cc04-4c94-b329-e2b1428b2428.png" alt="Confused face emoji with raised eyebrow" class="mx-auto mb-4">
+                    <p class="text-2xl">B is the key?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" id="slide4">
+            <div class="text-center mt-40">
+                <h2 class="text-4xl font-bold mb-20" style="color: var(--linkedin-blue);">The Truth is Simple</h2>
+                <div class="highlight-blue mx-auto max-w-lg p-10">
+                    <p class="puzzle-font text-5xl mb-8">A + C = D</p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4b5d0159-b34c-42c5-9ab9-7fe9e536177e.png" alt="Light bulb icon glowing yellow" class="mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" id="slide5">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-12" style="color: var(--linkedin-blue);">The Proof — It's That Simple</h2>
+                <table class="mx-auto puzzle-font" style="border-collapse: collapse; width: 80%;">
+                    <thead>
+                        <tr style="background-color: var(--linkedin-blue); color: white;">
+                            <th style="padding: 15px; text-align: center;">Row</th>
+                            <th style="padding: 15px; text-align: center;">A</th>
+                            <th style="padding: 15px; text-align: center;">B</th>
+                            <th style="padding: 15px; text-align: center;">C</th>
+                            <th style="padding: 15px; text-align: center;">D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--grid-line);">
+                            <td style="padding: 15px; text-align: center;">1</td>
+                            <td style="padding: 15px; text-align: center;">19</td>
+                            <td style="padding: 15px; text-align: center;">1</td>
+                            <td style="padding: 15px; text-align: center;">20</td>
+                            <td style="padding: 15px; text-align: center;">39</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--grid-line);">
+                            <td style="padding: 15px; text-align: center;">2</td>
+                            <td style="padding: 15px; text-align: center;">17</td>
+                            <td style="padding: 15px; text-align: center;">2</td>
+                            <td style="padding: 15px; text-align: center;">19</td>
+                            <td style="padding: 15px; text-align: center;">36</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--grid-line);">
+                            <td style="padding: 15px; text-align: center;">3</td>
+                            <td style="padding: 15px; text-align: center;">15</td>
+                            <td style="padding: 15px; text-align: center;">3</td>
+                            <td style="padding: 15px; text-align: center;">18</td>
+                            <td style="padding: 15px; text-align: center;">33</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--grid-line); background-color: #FFF9C4;">
+                            <td style="padding: 15px; text-align: center;">4</td>
+                            <td style="padding: 15px; text-align: center;">14</td>
+                            <td style="padding: 15px; text-align: center;">4</td>
+                            <td style="padding: 15px; text-align: center;">17</td>
+                            <td style="padding: 15px; text-align: center;">31</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="reveal-button" onclick="revealSolution()">Reveal Solution</button>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide" id="slide6">
+            <div class="text-center mt-20">
+                <h2 class="text-4xl font-bold mb-16" style="color: var(--linkedin-blue);">The Psychological Twist</h2>
+                <div class="flex justify-center items-center gap-8 mb-20">
+                    <div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4838d760-796e-4992-967c-a25a151e4850.png" alt="Calendar icon with July 13 circled in red" class="mx-auto mb-4">
+                    </div>
+                    <div class="text-left">
+                        <p class="text-2xl mb-4">Row 4 shifted intentionally to mislead</p>
+                        <div class="flex gap-4 puzzle-font">
+                            <div class="bg-blue-100 p-4 rounded">
+                                <p class="font-bold">Original:</p>
+                                <p>13  4  17 30</p>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded">
+                                <p class="font-bold">Misdirection:</p>
+                                <p>14  4  17 31</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide" id="slide7">
+            <div class="text-center mt-40">
+                <h2 class="text-4xl font-bold mb-16" style="color: var(--linkedin-blue);">Why This Matters</h2>
+                <div class="flex justify-center gap-8 max-w-4xl mx-auto">
+                    <div class="bg-blue-50 p-8 rounded-2xl w-1/3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/60b8ac24-1212-4bc6-8861-e760897e304a.png" alt="Brain icon representing thinking" class="mx-auto mb-4">
+                        <p class="text-xl">Avoid overthinking simple patterns</p>
+                    </div>
+                    <div class="bg-blue-50 p-8 rounded-2xl w-1/3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a922eecc-5028-4975-85ac-50c04c7c56c9.png" alt="Checkmark icon for verification" class="mx-auto mb-4">
+                        <p class="text-xl">Spot misdirection faster in data</p>
+                    </div>
+                    <div class="bg-blue-50 p-8 rounded-2xl w-1/3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca4c602a-517c-49d1-bf3d-dc6844025ddd.png" alt="Light bulb icon for ideas" class="mx-auto mb-4">
+                        <p class="text-xl">Build sharper logical reasoning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide" id="slide8">
+            <div class="text-center mt-40">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2baf48c2-83c6-4af9-a48a-c9e393fd3102.png" alt="Speech bubble icon for comments" class="mx-auto mb-8">
+                <h2 class="text-4xl font-bold mb-12" style="color: var(--linkedin-blue);">Did This Trick You?</h2>
+                <div class="bg-blue-50 rounded-2xl p-8 inline-block">
+                    <p class="text-xl">📄 Full solution breakdown in PDF</p>
+                </div>
+                <div class="mt-12 text-gray-500">
+                    <p>#VisualPerception #PatternRecognition #CriticalThinking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-nav">
+        <button onclick="prevSlide()">←</button>
+        <button onclick="nextSlide()">→</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[n].style.display = 'block';
+            currentSlide = n;
+        }
+        
+        function nextSlide() {
+            const newSlide = currentSlide >= slides.length - 1 ? 0 : currentSlide + 1;
+            showSlide(newSlide);
+        }
+        
+        function prevSlide() {
+            const newSlide = currentSlide <= 0 ? slides.length - 1 : currentSlide - 1;
+            showSlide(newSlide);
+        }
+        
+        // function revealSolution() {
+        //     alert("The solution is adding all three numbers in each row (A + B + C = D) to get the rightmost number");
+        // }
+        
+        // Initialize first slide
+        showSlide(0);
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
